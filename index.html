@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="/logo.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieRama</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/movies.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="/banner.webp" class="banner" alt="MovieRama Banner" />
+    <h1 class="glow">Welcome To<br /><span class="text-xxl">MovieRama!</span> </h1>
+    <div class="text-lg">
+      Search and discover your favorite films.
+    </div>
+    <form id="movie-search" alt="Seach for a movie." class="search-bar" onsubmit="return false;">
+      <input type="text" class="text-lg" placeholder="Movie title...">
+      <div class="search-buttons">
+        <button class="erase-button" type="button" onclick="eraseSearch()"><i data-lucide="X"></i></button>
+        <button class="search-button" type="submit">Search</button>
+      </div>
+    </form>
+
+    <h2 id="list-title">Now In Theaters</h2>
+
+    <div id="movie-list" class="grid">
+      <!-- Movies go here -->
+    </div>
+
+    <div id="scroll-sentinel" class="list-footer">
+      <div class="spinner"></div>
+      <p>You have reached the end.</p>
+    </div>
+
+    <!-- Movie card template -->
+    <template id="movie-template">
+      <div class="movie grid-item">
+        <div class="movie-block">
+          <div class="movie-card">
+            <img src="/placeholder.svg?height=450&width=300" alt="Inception" loading="lazy" class="movie-poster">
+            <div class="movie-card-overlay">
+              <div class="movie-poster-window"></div>
+              <div class="movie-info">
+                <h2 class="movie-title">Inception</h2>
+                <div class="movie-details">
+                  <span class="movie-year">2010</span>
+                  <div class="movie-rating">
+                    <span class="star">★</span>
+                    <span class="movie-rating-average">0.0</span>
+                  </div>
+                </div>
+                <div class="movie-overview">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic alias harum soluta repudiandae nam!
+                  Maxime possimus dicta perferendis necessitatibus ab, aperiam eum accusamus quos voluptatem nostrum
+                  ratione blanditiis explicabo mollitia.
+                </div>
+                <div class="movie-genres">
+                  <!-- Movie genre template goes here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="movie-expanded">
+            <div class="movie-trailer-section">
+              <div class="section-title">Trailer</div>
+              <div class="skeleton"></div>
+              <!-- Movie video template goes here -->
+            </div>
+            <div class="movie-reviews-section">
+              <div class="section-title">Reviews</div>
+              <div class="skeleton"></div>
+              <div class="skeleton"></div>
+              <div class="skeleton"></div>
+              <!-- Movie review template goes here -->
+            </div>
+            <div class="movie-similar-section">
+              <div class="section-title">Similar</div>
+              <div class="similar-movies">
+                <div class="skeleton"></div>
+                <!-- Movie similar template goes here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Movie genre pill -->
+    <template id="movie-genre-template">
+      <span class="movie-genre">Action</span>
+    </template>
+
+    <!-- Movie Review -->
+    <template id="movie-review-template">
+      <div class="movie-review text-sm">
+        <div class="review-quote">
+          Mind-bending and visually stunning. Nolan at his best!
+        </div>
+        <div class="review-rating">
+          <span class="star">★</span>
+          <span class="review-rating-score">8.8</span>
+          <span class="review-author">John Doe</span>
+        </div>
+      </div>
+    </template>
+
+    <!-- Similar movie -->
+    <template id="movie-similar-template">
+      <div class="similar-movie text-sm text-muted">
+        <img src="" alt="" class="similar-movie-image">
+        <!-- <div class="movie-similar-title">The Matrix</div> -->
+      </div>
+    </template>
+
+    <script type="module" src="/scripts/main.js"></script>
+</body>
+
+</html>
