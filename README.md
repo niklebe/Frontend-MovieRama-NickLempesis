@@ -1,7 +1,6 @@
 # Movierama - Vite Project
 
-This is a basic **Vite** project using **Vanilla JavaScript**, along with **Vitest** for unit testing and **Cypress** for end-to-end testing. This project is fast and optimized for modern web development.
-
+This is a basic **Vite** project using **Vanilla JavaScript**, along with **Vitest** for unit testing and **Playwright** for end-to-end testing.
 Author: Nick Lempesis @niklebe
 
 ## Performance Optimizations and Best Practices
